@@ -14,7 +14,7 @@ name: "CodeQL Advanced"
 on:
   workflow_dispatch:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "build-on"]
   pull_request:
     branches: [ "master" ]
   schedule:
