@@ -88,7 +88,7 @@ jobs:
     # 📚 See https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
     
     - name: Build dotnet solution
-      run: dotnet build ${{ matrix.location }}
+      run: dotnet build ./VulnerableCoreApp.csproj --configuration Release
       if: ${{ inputs.language == 'csharp' && inputs.dotnet_build_params == '' && matrix.build-mode == 'manual'}}
 
     - name: Perform CodeQL Analysis
